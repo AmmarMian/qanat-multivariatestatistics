@@ -94,7 +94,24 @@ def task_add_documents():
         }
 
 
-def task_delet_qanat():
+def task_initialize_example():
+    """Initialize the example project"""
+
+    def initialize_example():
+        print("Project: Multivariate Statistics has been initialized")
+        print("To see the list of experiments, run: qanat experiment list")
+        print("To run a specific experiment, run: qanat experiment run <experiment_name> [OPTIONS]")
+        print("See README.md for more details on the experiments")
+
+    return {
+        'basename': 'initialize_example',
+        'actions': [initialize_example],
+        'verbosity': 2,
+        'task_dep': ['init_qanat', 'add_experiments', 'add_documents']
+    }
+
+
+def task_delete_qanat():
     """Delete the Qanat project"""
 
     def delete_qanat():

@@ -1,9 +1,8 @@
 <a name="readme-top"></a>
-# Qanat Examples
+# Qanat Examples: Multivariate Statistics
 
-This repository is a collection of examples for [Qanat](https://github.com/AmmarMian/qanat) experiment management system. It is constructed to work as a single qanat project with different experiments to showcase the versatility of the tool. 
+This repository is an example project for [Qanat](https://ammarmian.github.io/qanat/), a command-line based exeperiment tracking tool. The focus here is on experiemnts to illustrate various results on multivariate statistics theory. It also illustrate how you can setup Qanat project for heavy Monte-Carlo based experiments' tracking.
 
-This is still a Work in Progress and documentation will be available at some point.
 
 <details>
   <summary>Table of Contents</summary>
@@ -26,7 +25,8 @@ This is still a Work in Progress and documentation will be available at some poi
 
 ## Documentation
 
-TODO
+Documentation fro Qanat available at https://ammarmian.github.io/qanat/.
+**Still in progress**.
 
 ## Installation
 
@@ -36,23 +36,30 @@ TODO
 * htcondor (for HTcondor runner)
 * an emoji friendly terminal
 * [Qanat](https://github.com/AmmarMian/qanat)
+* pydoit
 
-### Setting up the project
+### Setting up the projects
 
-After cloning the repository and going inside:
+You can fetch this example thanks to:
 
 ```bash
-git clone https://github.com/AmmarMian/qanat-examples
-cd qanat-examples
+git clone https://github.com/AmmarMian/qanat-multivariatestatistics
+cd qanat-multivariatestatistics
 ```
 
-Setup the project using the Makefile (Not available yet):
+Then to setup the project, do:
 
 ```bash
-doit init
+doit initialize_example
 ```
 
 which will initialize the qanat repertory and add relevant experiments and datasets.
+
+
+## Available experiments
+
+* sample\_2D: Visualisation of two-dimensional real-valued Gaussian sampling. Located in experiments/sample\_2D
+* cramer\_rao_\cov: Estimation of the mean and covariance of a real\_valued n-dimensional Gaussian distribution with a visualisation of the Cramer-Rao lower-bound. Located in experiments/cramer\_rao\_cov
 
 
 ## Authors
