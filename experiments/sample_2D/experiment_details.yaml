@@ -1,0 +1,18 @@
+# Experiment details for sample_2D
+
+name: sample_2D
+description: Sample 2D Gaussian data for visualisation.
+path: experiments/sample_2D/
+executable: experiments/sample_2D/sample.py
+executable_command: python
+tags:
+  - Gaussian
+  - MonteCarlo
+  - 2D
+  - Visualisation
+actions:
+  - plot:
+      name: plot
+      description: Plot 2D visualisation of Gaussian data with mean and covariance ellipse.
+      executable: experiments/sample_2D/plot.py
+      executable_command: python

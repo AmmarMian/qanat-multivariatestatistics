@@ -1,0 +1,24 @@
+# Experiment details for cramer_rao_mean_cov
+
+name: cramer_rao_cov
+description: MonteCarlo simulation of estimation of a centered Gaussian distribution covariance and comparison to Cramer-Rao lower-bound.
+path: experiments/cramer_rao_cov
+executable: experiments/cramer_rao_cov/compute_montecarlo.py
+executable_command: python
+tags:
+  - Gaussian
+  - Zero-mean
+  - Estimation
+  - Cramer-Rao
+  - MonteCarlo
+actions:
+  - plot:
+      name: plot
+      executable: experiments/cramer_rao_cov/plot.py
+      description: Plot the MSE and lower-bound as a function of the number of samples.
+      executable_command: python
+  - show_config:
+      name: show_config
+      executable: experiments/cramer_rao_cov/show_config.py
+      description: Show the configuration file used for this run.
+      executable_command: python

@@ -1,0 +1,19 @@
+# Experiment details for
+# robust_estimators_corrupted
+
+name: robust_estimators_corrupted
+description: Comparing several robust estimators of covariance on Gaussian noise with corrupted samples
+path: experiments/robust_estimators_corrupted/
+executable: experiments/robust_estimators_corrupted/compute_montecarlo.py
+executable_command: python
+tags:
+  - Gaussian
+  - Robust
+  - Corrupted
+  - MonteCarlo
+actions:
+  - plot:
+      name: plot
+      description: Plot the MSE as a function of number of samples
+      executable: experiments/robust_estimators_corrupted/plot.py
+      executable_command: python

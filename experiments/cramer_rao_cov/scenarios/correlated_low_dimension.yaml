@@ -1,0 +1,14 @@
+# ========================================
+# FileName: increasing_nsamples.yaml
+# Date: 01 juin 2023 - 13:58
+# Author: Ammar Mian
+# Email: ammar.mian@univ-smb.fr
+# GitHub: https://github.com/ammarmian
+# Brief: Example parameter file
+# =========================================
+
+fixed_args:
+  positional:
+    0: experiments/cramer_rao_cov/scenarios/correlated_low_dimension.py
+  options:
+    '--n_jobs': 12
