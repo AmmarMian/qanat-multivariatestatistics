@@ -30,11 +30,11 @@ if __name__ == "__main__":
         group_id = int(os.path.basename(args.storage_path).split('_')[1])
     else:
         info_file_path = os.path.join(args.storage_path, 'info.yaml')
-        group_id = 0
+        group_id = None
 
         # Check that there aren't multiple groups
         for f in os.listdir(args.storage_path):
-            if f.startswith('group_'):
+            if f.startswith('group_') and os.path.isdir(f):
                 raise ValueError('Multiple groups in the storage folder:'
                                  'please specify the group no')
 
@@ -43,17 +43,18 @@ if __name__ == "__main__":
         info = yaml.safe_load(info_file)
     commit_sha = info['commit_sha']
 
-    # Get the config file path from the commands
-    command = info['commands'][group_id]
+    # Get the config file path from the group_info
+    if group_id is not None:
+        group_info_file = os.path.join(args.storage_path,
+                                   f"group_{group_id}",
+                                   "group_info.yaml")
+    else:
+        group_info_file = os.path.join(args.storage_path,
+                                       "group_info.yaml")
 
-    # Look for the config file: only thing in the
-    # command that ends with .py besides execute
-    # script.
-    config_file_path = None
-    for c in command[2:]:
-        if c.endswith('.py'):
-            config_file_path = c
-            break
+    with open(group_info_file, "r") as f:
+        group_info = yaml.safe_load(f)
+    config_file_path = group_info['parameters']['pos_0']
 
     if config_file_path is None:
         raise ValueError('Sorry no config file found in the commands...')
