@@ -22,3 +22,8 @@ actions:
       executable: experiments/cramer_rao_cov/show_config.py
       description: Show the configuration file used for this run.
       executable_command: python
+  - export_csv:
+      name: export_csv
+      executable: experiments/cramer_rao_cov/export_csv.py
+      description: Export MSE and CRB to csv format
+      executable_command: python
