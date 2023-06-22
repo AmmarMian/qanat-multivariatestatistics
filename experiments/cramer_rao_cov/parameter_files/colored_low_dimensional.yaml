@@ -1,0 +1,13 @@
+# ========================================
+# FileName: white_high_dimension.yaml
+# Date: 22 juin 2023 - 14:36
+# Author: Ammar Mian
+# Email: ammar.mian@univ-smb.fr
+# GitHub: https://github.com/ammarmian
+# Brief: Qanat parameter file for scenario
+#        low-dimensional correlated noise
+# =========================================
+
+fixed_args:
+  positional:
+    0: experiments/cramer_rao_cov/scenarios/correlated_low_dimension.py
