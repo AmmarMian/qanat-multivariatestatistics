@@ -11,3 +11,5 @@
 fixed_args:
   positional:
     0: experiments/cramer_rao_cov/scenarios/correlated_low_dimension.py
+  options:
+    "--n_jobs": 12
