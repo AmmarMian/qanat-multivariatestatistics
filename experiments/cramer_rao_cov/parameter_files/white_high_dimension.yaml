@@ -10,4 +10,4 @@
 
 fixed_args:
   positional:
-    - 0:experiments/cramer_rao_cov/scenarios/white_high_dimension.py
+    0: experiments/cramer_rao_cov/scenarios/white_high_dimension.py
